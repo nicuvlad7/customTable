@@ -10,8 +10,7 @@ const CustomTable = ({ data, rowSelect, setSelectedData, selectedRows = [], hidd
         setSelectedData([]);
     }
     const selectAll = () => {
-        const x = data.map(data => data.id)
-        setSelectedData(x);
+        setSelectedData(data.map(data => data.id));
     }
     const manageParentClick = () => {
         if(selectedRows.length === data.length) {
