@@ -21,14 +21,14 @@ const CustomTable = ({ data, rowSelect, setSelectedData, selectedRows = [], hidd
     }
 
     const manageData = (id) => {
-        const x = [...selectedRows];
-        const idx = x.indexOf(id);
+        const currentData = [...selectedRows];
+        const idx = currentData.indexOf(id);
         if (idx !== -1) {
-            x.splice(idx, 1);
+            currentData.splice(idx, 1);
         } else {
-            x.push(id);
+            currentData.push(id);
         }
-        setSelectedData(x);
+        setSelectedData(currentData);
     }
 
     useEffect(() => {
